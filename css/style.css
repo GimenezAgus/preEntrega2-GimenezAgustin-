@@ -1,0 +1,540 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* border: solid 1px black; */
+}
+
+/* Generales */
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: gray;
+}
+/* .row {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+} */
+/* .col {
+  width: 100%;
+} */
+
+/* Header Style */
+header {
+  background-image: linear-gradient(
+    30deg,
+    #011826,
+    #592f33,
+    #9c2b25,
+    #592f33,
+    #011826
+  );
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  height: 7.1rem;
+  padding: 0.6rem;
+}
+.header--grid {
+  display: grid;
+  grid-template-areas: "logo nav chango";
+  justify-content: space-between;
+}
+.logo {
+  grid-area: logo;
+  margin-right: 1rem;
+}
+.logo--size {
+  width: 6rem;
+  height: 6rem;
+}
+/* Nav List */
+.nav__list {
+  list-style: none;
+  display: flex;
+  font-size: 1.2rem;
+  grid-area: nav;
+}
+/* Nav Links */
+.nav__link {
+  background-color: #011826;
+  color: #9c2b25;
+  font-family: "Franklin Gothic Medium";
+  padding: 0 0.3rem 0 0.3rem;
+  text-transform: capitalize;
+  display: inline;
+}
+.nav__list--position {
+  align-self: end;
+}
+.nav__link:hover {
+  background-color: #21323d;
+}
+/* Carrito */
+.shoppingCart {
+  width: 2rem;
+  grid-area: chango;
+  margin-right: 1rem;
+}
+.shoppingCart--position {
+  align-self: center;
+}
+.shoppingCart:hover {
+  opacity: 0.85;
+}
+
+/* Main Style */
+main {
+  padding: 1rem;
+}
+.main--background--image {
+  background-image: url("../img/Patron\ fondo.jpg");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+}
+.main--background--color {
+  background-image: url(../img/Fondo-Gris.png);
+  background-position: center;
+  background-repeat: repeat;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  overflow: hidden;
+}
+/* Cartas/Cajas */
+.cards__favoriteSections--grid {
+  display: grid;
+  grid-template-areas:
+    "favTitle favTitle favTitle favTitle"
+    "portatiles placas gabinetes consolas";
+}
+
+/* Carta con Imagen de fondo */
+.card {
+  overflow: hidden;
+  margin: 1rem 0.4rem 0.5rem 0.4rem;
+  padding: 2rem;
+  max-height: 35rem;
+  max-width: 24rem;
+  text-align: center;
+  background-image: url(../img/pattern-negro-rojo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card:hover,
+.whatsApp__icon:hover {
+  opacity: 0.92;
+}
+.card__image {
+  width: 20rem;
+  transition: transform 1.5s;
+}
+.card__image:hover {
+  transform: scale(1.2);
+}
+.card__description {
+  color: white;
+  transition: transform 1.5s;
+}
+.card__description--size {
+  max-height: 45rem;
+}
+.card__description--background {
+  background-image: url(../img/Fondo-Gris.png);
+  background-size: 1%;
+  background-position: center;
+  background-repeat: repeat;
+  border: solid 0.1rem white;
+  padding: 0.3rem;
+  margin-top: 0.4rem;
+  transition: transform 1.5s;
+}
+.card__description:hover,
+.card__description--background:hover {
+  transform: scale(1.16);
+}
+
+/* Carta con Color de fondo */
+.productProblem,
+.product__description,
+.tutorial,
+.preguntasFrecuentes,
+.display1,
+.display2 {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border: solid 3px #9c2b25;
+  overflow: hidden;
+  display: inline-table;
+}
+
+/* Otras Cartas */
+.listProduct__card {
+  border: solid 3px #9c2b25;
+}
+
+/* Secciones dentro de páginas */
+.favoriteSections,
+.services,
+.news,
+.helpCenter,
+.FAQ,
+.product,
+.placasDeVideo {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Títulos */
+
+/* Titulo con fondo degradado */
+.favoriteSections__title,
+.services__title,
+.news__title,
+.helpCenter__title {
+  text-align: center;
+  font-family: Arial;
+  color: aliceblue;
+  padding: 1rem;
+  background-image: linear-gradient(
+    15deg,
+    #011826,
+    #592f33,
+    #9c2b25,
+    #592f33,
+    #011826
+  );
+}
+
+/* Título con linea roja */
+.productProblem__title,
+.product__title,
+.tutorial__title,
+.preguntasFrecuentes_title,
+.display__title,
+.serchSideBar__title,
+.card__title {
+  padding: 0.5rem;
+  border-bottom: solid 1px #9c2b25;
+  font-family: "Lucida Sans";
+  margin-top: 0.5rem;
+  color: white;
+}
+.preguntasFrecuentes_title,
+.card__title {
+  border-bottom: none;
+}
+.listProduct__title {
+  padding-bottom: 1rem;
+  max-width: 15rem;
+}
+
+/* Sub Títulos */
+.productProblem__subTitle,
+.product__subTitle,
+.product__title,
+.tutorial__subTitle,
+.display__subTitle,
+.serchSideBar__subTitle {
+  padding: 0.7rem;
+  text-align: left;
+  font-family: Arial;
+}
+.serchSideBar__subTitle {
+  font-size: 1.15rem;
+  text-align: center;
+  background-color: #9c2b25;
+}
+/* Centro de Ayuda */
+.tipoDeConsulta,
+.nombreCompleto,
+.numeroDelPedido,
+.lugarCompra {
+  text-align: left;
+  padding: 0.7rem;
+}
+.checkbox {
+  text-align: center;
+  padding-top: 1rem;
+}
+.terminosYCondiciones {
+  color: white;
+}
+.terminosYCondiciones:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+td a {
+  color: white;
+}
+/* FAQ  */
+.FAQ__paragraph {
+  text-align: justify;
+  padding: 0.5rem;
+}
+.list--number,
+.list--circle {
+  list-style: decimal;
+  padding: 0 1rem 1rem 1rem;
+  text-align: justify;
+}
+.list--circle {
+  list-style: circle;
+}
+
+/* Producto*/
+.product__card {
+  border: solid 3px #9c2b25;
+  margin-left: 7rem;
+}
+.product__title {
+  font-size: 2rem;
+}
+.product__description {
+  margin-right: 5rem;
+  max-width: 60rem;
+}
+.product__cuotas {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  color: yellow;
+}
+.product__description div {
+  padding: 1rem 0 1rem 0.5rem;
+}
+.product__description section section {
+  text-align: left;
+  font-size: 1.3rem;
+}
+.product__price {
+  color: white;
+  border: solid 2px red;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    15deg,
+    #011826,
+    #592f33,
+    #9c2b25,
+    #592f33,
+    #011826
+  );
+}
+.product__price span {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.product__price--line {
+  text-decoration: line-through;
+}
+.product__butom {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  background-color: rgb(233, 233, 183);
+  color: black;
+}
+.product__butom:hover {
+  background-color: yellow;
+}
+
+/* Placas de Video */
+
+/* Barra de busqueda */
+.serchSideBar {
+  width: 22rem;
+}
+.serchProduct {
+  text-align: center;
+  padding: 0.7rem;
+}
+.serchProduct input {
+  font-size: 1.2rem;
+}
+.productOrder {
+  padding: 0.7rem;
+  text-align: left;
+  font-family: Arial;
+  font-size: 1.1rem;
+  border-bottom: solid 1px #9c2b25;
+}
+.categorySelect {
+  padding: 1rem;
+  text-align: left;
+}
+.categorySelect input {
+  font-size: 1.2rem;
+}
+/* Lista de productos */
+.product__list {
+  display: inline-table;
+  max-width: 75em;
+}
+.listProduct__image {
+  width: 12rem;
+}
+.listProduct__image:hover {
+  transform: none;
+}
+.listProduct__price {
+  padding: 4px;
+  background-image: linear-gradient(
+    15deg,
+    #011826,
+    #592f33,
+    #9c2b25,
+    #592f33,
+    #011826
+  );
+  color: yellow;
+  border: solid 2px red;
+  font-size: 1.5rem;
+}
+
+/* WhatsApp Icon */
+.whatsApp__icon {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  overflow: hidden;
+}
+.whatsApp__icon img {
+  width: 90%;
+}
+
+/* Footer */
+footer {
+  background-image: linear-gradient(
+    30deg,
+    #011826,
+    #592f33,
+    #9c2b25,
+    #592f33,
+    #011826
+  );
+}
+.info {
+  margin-left: 0.5rem;
+}
+.info--color {
+  color: white;
+  padding: 1rem;
+}
+
+/* cartas/cajas */
+.mediosDePago,
+.mediosDeEnvio,
+.redesSociales {
+  padding: 0.5rem;
+  margin-top: 0.1rem;
+}
+/* Title Style */
+.mediosDePago__title,
+.mediosDeEnvio__title,
+.redesSociales__title {
+  font-family: Arial, sans-serif;
+  padding-bottom: 0.3rem;
+}
+
+/* Icons Style */
+.mediosDePago__icon,
+.mediosDeEnvio__icon,
+.redesSociales__icon {
+  width: 3.2rem;
+}
+
+.redesSociales__icon:hover {
+  opacity: 0.85;
+}
+
+/* Copyrigth Style */
+.copyright {
+  background-color: black;
+  font-weight: 400;
+}
+.copyright__bottom {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  text-align: center;
+}
+
+/* Solo areas */
+.favoriteSections__title--area {
+  grid-area: favTitle;
+}
+.portatiles--area {
+  grid-area: portatiles;
+}
+.placas--area {
+  grid-area: placas;
+}
+.gabinetes--area {
+  grid-area: gabinetes;
+}
+.consolas--area {
+  grid-area: consolas;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  /* Main Style */
+  .main--background--color {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  /* Header */
+  .nav__list {
+    display: block;
+    text-align: center;
+    background-color: #011826;
+  }
+  .logo {
+    align-self: center;
+  }
+  .logo--size {
+    width: 4rem;
+    height: 4rem;
+  }
+  /* Cartas/Cajas */
+  .cards__favoriteSections--grid {
+    grid-template-areas:
+      "favTitle favTitle"
+      "portatiles placas"
+      "gabinetes consolas";
+  }
+  /* Carta con Imagen de fondo */
+  .card {
+    padding: 0.5rem;
+  }
+  /* whatsApp Icon */
+  .whatsApp__icon img {
+    width: 70%;
+  }
+  /* Footer */
+  /* Title Style */
+  .mediosDePago__title,
+  .mediosDeEnvio__title,
+  .redesSociales__title {
+    font-size: 75%;
+  }
+
+  /* Icons Style */
+  .mediosDePago__icon,
+  .mediosDeEnvio__icon,
+  .redesSociales__icon {
+    width: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+}

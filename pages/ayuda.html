@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../img/Logo/TecnoFix diseño Minimalista sin fondo PNG .png"
+      type="image/x-icon"
+    />
+    <!-- Style css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>TecnoFix - Ayuda</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header--grid">
+      <!-- Logo header -->
+      <a href="#" class="logo">
+        <img
+          class="logo--size"
+          src="img/Logo/TecnoFix diseño Minimalista con fondo oscuro PNG.png"
+          alt="logo-tecnoFix-con-fondo-oscuro"
+        />
+      </a>
+      <nav>
+        <!-- Nav pags -->
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a class="nav__link" href="pages/ayuda.html">Ayuda</a>
+          </li>
+          <li>
+            <a class="nav__link" href="pages/faq.html">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="shoppingCart--position" href="#">
+        <img class="shoppingCart" src="img/carrito.png" alt="carrito" />
+      </a>
+    </header>
+    <!-- Main -->
+    <main class="main--background--image">
+      <div class="main--background--color">
+        <!-- Help Center -->
+        <section class="helpCenter">
+          <h2 class="helpCenter__title">📃 CENTRO DE AYUDA 📃</h2>
+          <!-- Problema con Producto -->
+          <section class="productProblem">
+            <h3 class="productProblem__title">Problemas con un Producto</h3>
+            <form action="">
+              <h4 class="productProblem__subTitle">
+                ¿Tu consulta es por una compra que realizaste?
+              </h4>
+              <div class="tipoDeConsulta">
+                Si
+                <input type="radio" name="tipoDeConsulta" id="si" />
+                No
+                <input type="radio" name="tipoDeConsulta" id="no" />
+              </div>
+              <h4 class="productProblem__subTitle">
+                Completá los Siguientes Datos:
+              </h4>
+              <div class="nombreCompleto">
+                Nombre:
+                <input type="text" name="nombre" id="nombre" />
+                <br />
+                <br />
+                Apellido:
+                <input type="text" name="apellido" id="apellido" />
+              </div>
+              <div class="numeroDelPedido">
+                Nro del Pedido:
+                <input type="text" name="numeroDelPedido" id="numero" />
+              </div>
+              <div class="lugarCompra">
+                <label for="lugarCompra"
+                  >¿Por dónde realizaste la compra?</label
+                >
+                <select name="lugarCompra" id="lugarCompra">
+                  <option value="sucursal">Sucursal</option>
+                  <option value="online">Online</option>
+                  <option value="tel">Por teléfono</option>
+                </select>
+              </div>
+              <div class="comentarios">
+                <label for="comentarios">Comentarios:</label>
+                <br />
+                <textarea
+                  name="comentarios"
+                  id="comentarios"
+                  cols="50"
+                  rows="15"
+                ></textarea>
+                <div>
+                  <input type="submit" value="Envíar" />
+                  <input type="reset" value="Borrar" />
+                </div>
+              </div>
+              <div class="checkbox">
+                <span
+                  >Acepta los
+                  <a class="terminosYCondiciones" href="faq.html"
+                    >terminos de condiciones</a
+                  ></span
+                >
+                <input type="checkbox" name="acepta" id="acepta" value="1" />
+              </div>
+            </form>
+          </section>
+          <!-- Vídeos Tutoriales -->
+          <section class="tutorial">
+            <h3 class="tutorial__title">Videos Guía</h3>
+            <h4 class="tutorial__subTitle">¿Cómo realizo una compra?</h4>
+            <div class="videoTutorial">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/aqK-scaAPRs"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <h4 class="tutorial__subTitle">¿Cómo contrato un servicio?</h4>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/QKjeXXefThA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
+          <!-- Preguntas Frecuenes -->
+          <section class="preguntasFrecuentes">
+            <h3 class="preguntasFrecuentes_title">Preguntas Frecuentes:</h3>
+            <table border="6" cellpadding="10" cellspacing="10">
+              <tr>
+                <th>Acerca de Envíos:</th>
+                <th>Formas de Pago:</th>
+              </tr>
+              <tr>
+                <td>
+                  <a href="faq.html">¿Dónde veo el seguimiento de mi pedido?</a>
+                </td>
+                <td><a href="faq.html">¿Cuáles son las formas de pago?</a></td>
+              </tr>
+              <tr>
+                <td><a href="faq.html">¿Puedo retirarlo en la sucursal?</a></td>
+                <td>
+                  <a href="faq.html"
+                    >¿Cómo abono a través de depósito/transferencia?</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="faq.html"
+                    >Llegó mi pedido y no estaba para recibirlo ¿Qué debo
+                    hacer?</a
+                  >
+                </td>
+                <td>
+                  <a href="faq.html"
+                    >¿Cómo obtengo el juego y/o beneficios de los productos en
+                    promoción?</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <!-- Icono WhatsApp -->
+        <section class="whatsApp__icon">
+          <a href="#">
+            <img src="../img/whatsApp_icon.png" alt="WhatsApp" />
+          </a>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <!-- Footer Info -->
+      <div class="info--color">
+        <!-- Listado de redes -->
+        <section class="info redesSociales">
+          <h5 class="info redesSociales__title">Nuestras redes sociables</h5>
+          <a href="https://www.instagram.com/agusstin_nicolass/?hl=es"
+            ><img
+              class="info redesSociales__icon"
+              src="../img/footer/Instagram.png"
+              alt="instagram"
+          /></a>
+          <a href="#">
+            <img
+              class="info redesSociales__icon"
+              src="../img/footer/Facebook.png"
+              alt="facebook"
+            />
+          </a>
+          <a href="#">
+            <img
+              class="info redesSociales__icon"
+              src="../img/footer/Telegram.png"
+              alt="telegram"
+            />
+          </a>
+        </section>
+        <!-- Medios de pago -->
+        <section class="info mediosDePago">
+          <h5 class="info mediosDePago__title">Medios de pago</h5>
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/visa.png"
+            alt="visa"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/mastercard.png"
+            alt="masterCard"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/american-express.png"
+            alt="americanExpress"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/Uala.png"
+            alt="uala"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/naranja.png"
+            alt="tarjetaNaranja"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/maestro.png"
+            alt="maestro"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/efectivo.png"
+            alt="efectivo"
+          />
+          <img
+            class="info mediosDePago__icon"
+            src="../img/footer/deposito.png"
+            alt="transfBancaria"
+          />
+        </section>
+        <!-- Medios de envío -->
+        <section class="info mediosDeEnvio">
+          <h5 class="info mediosDeEnvio__title">Medios de envío</h5>
+          <img
+            class="info mediosDeEnvio__icon"
+            src="../img/footer/Andreani.png"
+            alt="andreani"
+          />
+          <img
+            class="info mediosDeEnvio__icon"
+            src="../img/footer/correo-argentino.png"
+            alt="correoArgentino"
+          />
+          <img
+            class="info mediosDeEnvio__icon"
+            src="../img/footer/retiro-local.png"
+            alt="retiroSucursal"
+          />
+        </section>
+      </div>
+      <!-- Footer Copyrigth -->
+      <section class="footer copyright">
+        <h6 class="footer copyright__bottom">
+          &copy; Copyright 2022
+          <a href="#">TecnoFix</a> | Creada por
+          <a
+            href="https://www.linkedin.com/in/agust%C3%ADn-nicol%C3%A1s-gim%C3%A9nez-4517241a5/"
+            >Giménez Agustín</a
+          >
+        </h6>
+      </section>
+    </footer>
+  </body>
+</html>
