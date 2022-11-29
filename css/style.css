@@ -485,7 +485,20 @@ footer {
 }
 
 /* MEDIA QUERIES */
-
+@media (max-width: 930px) {
+  .logo--size {
+    width: 4rem;
+    height: 4rem;
+  }
+  /* Cartas/Cajas */
+  .cards__favoriteSections--grid {
+    grid-template-areas:
+      "favTitle favTitle favTitle"
+      "portatiles placas gabinetes"
+      "consolas consolas consolas";
+  }
+}
+/* 768 px */
 @media (max-width: 768px) {
   /* Main Style */
   .main--background--color {
