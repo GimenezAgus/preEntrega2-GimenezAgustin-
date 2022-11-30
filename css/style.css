@@ -94,7 +94,6 @@ main {
 }
 .main--background--image {
   background-image: url("../img/Patron\ fondo.jpg");
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,25 +109,37 @@ main {
   overflow: hidden;
 }
 /* Cartas/Cajas */
+
+/* Grids de cajas */
 .cards__favoriteSections--grid {
   display: grid;
   grid-template-areas:
     "favTitle favTitle favTitle favTitle"
     "portatiles placas gabinetes consolas";
 }
-
+.cards__services--grid {
+  display: grid;
+  grid-template-areas: "servicesTitle servicesTitle servicesTitle " "servicioTec tuPC tuWeb";
+}
+.cards__news--grid {
+  display: grid;
+  grid-template-areas:
+    "newsTitle newsTitle newsTitle newsTitle"
+    "ryzen9 rtx3080 lgProX hyperxAlloy";
+}
 /* Carta con Imagen de fondo */
 .card {
   overflow: hidden;
   margin: 1rem 0.4rem 0.5rem 0.4rem;
   padding: 2rem;
-  max-height: 35rem;
-  max-width: 24rem;
-  text-align: center;
   background-image: url(../img/pattern-negro-rojo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-areas: "card-image" "card-title";
+  align-content: flex-end;
+  justify-items: center;
 }
 .card:hover,
 .whatsApp__icon:hover {
@@ -146,7 +157,7 @@ main {
   transition: transform 1.5s;
 }
 .card__description--size {
-  max-height: 45rem;
+  min-height: 45rem;
 }
 .card__description--background {
   background-image: url(../img/Fondo-Gris.png);
@@ -193,7 +204,6 @@ main {
 .product,
 .placasDeVideo {
   padding: 1rem;
-  text-align: center;
 }
 
 /* Títulos */
@@ -225,11 +235,13 @@ main {
 .display__title,
 .serchSideBar__title,
 .card__title {
+  font-size: 1.2rem;
   padding: 0.5rem;
   border-bottom: solid 1px #9c2b25;
   font-family: "Lucida Sans";
   margin-top: 0.5rem;
   color: white;
+  text-align: center;
 }
 .preguntasFrecuentes_title,
 .card__title {
@@ -468,6 +480,7 @@ footer {
 }
 
 /* Solo areas */
+/* Favorite sections */
 .favoriteSections__title--area {
   grid-area: favTitle;
 }
@@ -483,27 +496,88 @@ footer {
 .consolas--area {
   grid-area: consolas;
 }
-
-/* MEDIA QUERIES */
-@media (max-width: 930px) {
+/* Otros servicios */
+.services__title--area {
+  grid-area: servicesTitle;
+}
+.servicioTec--area {
+  grid-area: servicioTec;
+}
+.tuPc--area {
+  grid-area: tuPc;
+}
+.tuWeb--area {
+  grid-area: tuWeb;
+}
+/* Novedades */
+.news__title--area {
+  grid-area: newsTitle;
+}
+.ryzen9--area {
+  grid-area: ryzen9;
+}
+.rtx3080--area {
+  grid-area: rtx3080;
+}
+.lgProX--area {
+  grid-area: lgProX;
+}
+.hyperxAlloy--area {
+  grid-area: hyperxAlloy;
+}
+/* cartas */
+.card__image {
+  grid-area: card-image;
+}
+.card__title {
+  grid-area: card-title;
+}
+/* Favorite sections area size */
+.consolas--area,
+.placas--area,
+.gabinetes--area,
+.portatiles--area {
+  max-height: 32rem;
+}
+/* MEDIA QUERIES (de mayor a menor)*/
+/* 1023px */
+@media (max-width: 1023px) {
+  .main--background--color {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .logo--size {
     width: 4rem;
     height: 4rem;
   }
   /* Cartas/Cajas */
+  /* Grid en cajas */
   .cards__favoriteSections--grid {
     grid-template-areas:
-      "favTitle favTitle favTitle"
-      "portatiles placas gabinetes"
-      "consolas consolas consolas";
+      "favTitle favTitle"
+      "portatiles placas "
+      "gabinetes consolas ";
+  }
+  .cards__services--grid {
+    grid-template-areas:
+      "servicesTitle servicesTitle "
+      "servicioTec tuPC"
+      "tuWeb tuWeb";
+  }
+  .cards__news--grid {
+    display: grid;
+    grid-template-areas:
+      "newsTitle newsTitle"
+      "ryzen9 rtx3080 "
+      "lgProX hyperxAlloy";
   }
 }
 /* 768 px */
 @media (max-width: 768px) {
   /* Main Style */
   .main--background--color {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   /* Header */
   .nav__list {
@@ -519,15 +593,17 @@ footer {
     height: 4rem;
   }
   /* Cartas/Cajas */
-  .cards__favoriteSections--grid {
-    grid-template-areas:
-      "favTitle favTitle"
-      "portatiles placas"
-      "gabinetes consolas";
-  }
+  /* Grids en cajas */
   /* Carta con Imagen de fondo */
   .card {
     padding: 0.5rem;
+  }
+  /* sections */
+  .favoriteSections__title,
+  .services__title,
+  .news__title,
+  .helpCenter__title {
+    font-size: 110%;
   }
   /* whatsApp Icon */
   .whatsApp__icon img {
@@ -548,6 +624,36 @@ footer {
     width: 2rem;
   }
 }
-
-@media (min-width: 1024px) {
+/* 480px */
+@media (max-width: 480px) {
+  /* Cartas/Cajas */
+  /* Grid en cajas */
+  .cards__favoriteSections--grid {
+    grid-template-areas:
+      "favTitle"
+      "portatiles"
+      "placas"
+      "gabinetes"
+      "consolas ";
+  }
+  .cards__services--grid {
+    grid-template-areas:
+      "servicesTitle "
+      "servicioTec"
+      "tuPC"
+      "tuWeb";
+  }
+  .cards__news--grid {
+    display: grid;
+    grid-template-areas:
+      "newsTitle"
+      "ryzen9"
+      "rtx3080 "
+      "lgProX "
+      "hyperxAlloy";
+  }
+}
+/* whatsApp Icon */
+.whatsApp__icon img {
+  width: 60%;
 }
