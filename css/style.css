@@ -15,79 +15,18 @@ a {
   text-decoration: none;
   color: gray;
 }
-/* .row {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-} */
-/* .col {
-  width: 100%;
-} */
 
+/* Boostrap */
 /* Header Style */
 header {
-  background-image: linear-gradient(
-    30deg,
-    #011826,
-    #592f33,
-    #9c2b25,
-    #592f33,
-    #011826
-  );
   position: sticky;
   top: 0px;
   z-index: 2;
-  height: 7.1rem;
-  padding: 0.6rem;
-}
-.header--grid {
-  display: grid;
-  grid-template-areas: "logo nav chango";
-  justify-content: space-between;
-}
-.logo {
-  grid-area: logo;
-  margin-right: 1rem;
 }
 .logo--size {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
 }
-/* Nav List */
-.nav__list {
-  list-style: none;
-  display: flex;
-  font-size: 1.2rem;
-  grid-area: nav;
-}
-/* Nav Links */
-.nav__link {
-  background-color: #011826;
-  color: #9c2b25;
-  font-family: "Franklin Gothic Medium";
-  padding: 0 0.3rem 0 0.3rem;
-  text-transform: capitalize;
-  display: inline;
-}
-.nav__list--position {
-  align-self: end;
-}
-.nav__link:hover {
-  background-color: #21323d;
-}
-/* Carrito */
-.shoppingCart {
-  width: 2rem;
-  grid-area: chango;
-  margin-right: 1rem;
-}
-.shoppingCart--position {
-  align-self: center;
-}
-.shoppingCart:hover {
-  opacity: 0.85;
-}
-
 /* Main Style */
 main {
   padding: 1rem;
@@ -140,6 +79,7 @@ main {
   grid-template-areas: "card-image" "card-title";
   align-content: flex-end;
   justify-items: center;
+  border: none;
 }
 .card:hover,
 .whatsApp__icon:hover {
@@ -421,6 +361,7 @@ td a {
 }
 .whatsApp__icon img {
   width: 90%;
+  font-size: 100%;
 }
 
 /* Footer */
@@ -467,11 +408,10 @@ footer {
 .redesSociales__icon:hover {
   opacity: 0.85;
 }
-
 /* Copyrigth Style */
 .copyright {
   background-color: black;
-  font-weight: 400;
+  height: 1.5rem;
 }
 .copyright__bottom {
   font-family: Arial, Helvetica, sans-serif;
@@ -572,25 +512,18 @@ footer {
       "lgProX hyperxAlloy";
   }
 }
+/* 991 px */
+@media (max-width: 991px) {
+  .logo--size {
+    display: none;
+  }
+}
 /* 768 px */
 @media (max-width: 768px) {
   /* Main Style */
   .main--background--color {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-  }
-  /* Header */
-  .nav__list {
-    display: block;
-    text-align: center;
-    background-color: #011826;
-  }
-  .logo {
-    align-self: center;
-  }
-  .logo--size {
-    width: 4rem;
-    height: 4rem;
   }
   /* Cartas/Cajas */
   /* Grids en cajas */
