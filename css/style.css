@@ -15,7 +15,14 @@ a {
   text-decoration: none;
   color: gray;
 }
-
+/* .col {
+  width: 100%;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+} */
 /* Boostrap */
 /* Header Style */
 header {
@@ -28,25 +35,32 @@ header {
   height: 5rem;
 }
 /* Main Style */
-main {
-  padding: 1rem;
-}
+/* Main Backgrounds */
 .main--background--image {
-  background-image: url("../img/Patron\ fondo.jpg");
+  background-image: url("../img/Fondo/pattern-lava-2.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration: none;
+  padding: 1rem;
 }
 .main--background--color {
-  background-image: url(../img/Fondo-Gris.png);
+  background-image: url(../img/Fondo/Fondo-Gris.png);
   background-position: center;
   background-repeat: repeat;
   margin-left: 5rem;
   margin-right: 5rem;
   overflow: hidden;
 }
+
+/* Banner */
+.banner {
+  display: grid;
+  justify-items: center;
+}
+/* Titulo banner */
+
 /* Cartas/Cajas */
 
 /* Grids de cajas */
@@ -71,7 +85,7 @@ main {
   overflow: hidden;
   margin: 1rem 0.4rem 0.5rem 0.4rem;
   padding: 2rem;
-  background-image: url(../img/pattern-negro-rojo.jpg);
+  background-image: url(../img/Fondo/pattern-negro-rojo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,7 +114,7 @@ main {
   min-height: 45rem;
 }
 .card__description--background {
-  background-image: url(../img/Fondo-Gris.png);
+  background-image: url(../img/Fondo/Fondo-Gris.png);
   background-size: 1%;
   background-position: center;
   background-repeat: repeat;
